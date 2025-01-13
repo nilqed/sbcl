@@ -26,5 +26,10 @@ See [Commit 88ef2eb](https://github.com/nilqed/sbcl/commit/88ef2eba6a0d5dc19414b
 5. Test it :lemon:.
 
 
+## Support package "TMSPT"
 
+One may control __TeXmacs__ by messaging ...
 
+:TODO:
+
+![tmspt](./plugin/doc/tm-p-sample-1.jpg?raw=true)
