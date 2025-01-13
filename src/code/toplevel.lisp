@@ -13,6 +13,11 @@
 
 (in-package "SB-IMPL")
 
+
+(defparameter tm-begin-data (code-char 2))
+(defparameter tm-end-data (code-char 5))
+
+
 ;;;; default initfiles
 
 (defun sysinit-pathname ()
@@ -681,7 +686,11 @@ that provides the REPL for the system. Assumes that *STANDARD-INPUT* and
 ;;; Our default REPL prompt is the minimal traditional one.
 (defun repl-prompt-fun (stream)
   (fresh-line stream)
-  (write-string "* " stream)) ; arbitrary but customary REPL prompt
+  (progn
+    (princ tm-begin-data stream)
+    (princ "prompt#SBCL> " stream)
+    (princ tm-end-data stream))) ; arbitrary but customary REPL prompt
+
 
 ;;; Our default form reader does relatively little magic, but does
 ;;; handle the Unix-style EOF-is-end-of-process convention.
@@ -729,7 +738,11 @@ that provides the REPL for the system. Assumes that *STANDARD-INPUT* and
             (unless noprint
               (dolist (result results)
                 (fresh-line)
-                (prin1 result)))))
+                (princ tm-begin-data)
+                (princ "verbatim:")
+                (prin1 result)
+                (princ tm-end-data)
+                (princ (code-char 10))))))
      ;; If we started stepping in the debugger we want to stop now.
      (disable-stepping))))
 
