@@ -13,9 +13,11 @@ See [Commit 88ef2eb](https://github.com/nilqed/sbcl/commit/88ef2eba6a0d5dc19414b
 
 It is assumed that you already have a version of __SBCL__ installed, so that these sources can be compiled.
 As described in `INSTALL`, a build of __SBCL__ may be run without installing it (by `run-sbcl.sh`). Just this
-freature will be used here, so that your current installation of __SBCL__ will not be compromised.
+feature will be used here, hence your current installation of __SBCL__ will not be compromised.
 
 ![terminal](./plugin/doc/terminal.jpg?raw=true)
+
+### Insert -> Session -> SBCL 
 
 ![texmacs](./plugin/doc/texmacs.jpg?raw=true)
 
