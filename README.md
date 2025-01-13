@@ -11,7 +11,13 @@ we have __SBCL__ to output the necessary control codes. As a prototype this was 
 
 See [Commit 88ef2eb](https://github.com/nilqed/sbcl/commit/88ef2eba6a0d5dc19414b8dfd6e9ac850e451188)
 
+It is assumed that you already have a version of __SBCL__ installed, so that these sources can be compiled.
+As described in `INSTALL`, a build of __SBCL__ may be run without installing it (by `run-sbcl.sh`). Just this
+feature will be used here, hence your current installation of __SBCL__ will not be compromised.
+
 ![terminal](./plugin/doc/terminal.jpg?raw=true)
+
+### Insert -> Session -> SBCL 
 
 ![texmacs](./plugin/doc/texmacs.jpg?raw=true)
 
