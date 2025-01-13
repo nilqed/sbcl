@@ -9,9 +9,9 @@ we have __SBCL__ to output the necessary control codes. As a prototype this was 
 1. src/code/debug.lisp
 2. src/code/top-level.lisp
 
-![terminal](./plugin/doc/terminal.png?raw=true)
+![terminal](./plugin/doc/terminal.jpg?raw=true)
 
-![texmacs](./plugin/doc/texmacs.png?raw=true)
+![texmacs](./plugin/doc/texmacs.jpg?raw=true)
 
 ## Installation
 
