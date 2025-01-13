@@ -1,4 +1,4 @@
-:warning: This is the `texmacs` branch for the TeXmacs plugin! 
+:warning: This is the `texmacs` branch for the TeXmacs plugin :construction:
 
 # SBCL TeXmacs Plugin
 
@@ -19,7 +19,7 @@ we have __SBCL__ to output the necessary control codes. As a prototype this was 
 2. Inside, execute `sh make.sh` (recommended: read INSTALL) 
 3. Check if build was successful by `sh run-sbcl.sh`
 4. Copy the `plugin` directory to your TeXmacs/plugin folder and rename it to `sbcl`:
-   Before, adjust the path `to run-sbcl.sh` by editing the file `./progs/init-sbcl.scm`   
+   Before, adjust the path to `run-sbcl.sh` by editing the file `./plugin/progs/init-sbcl.scm`   
    `$ cp -r ./plugin $HOME/.Texmacs/plugins/sbcl`
 5. Test it :lemon:.
 
