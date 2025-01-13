@@ -57,94 +57,95 @@
 (defun inline-image (url &key (w "") (h "") (x "") (y ""))
     (let ((msg (format 'nil 
         "(make-link-image ~S ~S ~S ~S ~S)" url w h x y)))
+           (insert-text-field-above)
            (command msg)))
 
       
-(defun toggleMathInput  ()
+(defun toggle-math-input  ()
       (command "(toggle-session-math-input)"))
       
-(defun toggleMultilineInput  ()
+(defun toggle-multiline-input  ()
       (command "(toggle-session-multiline-input)"))
 
-(defun toggleMathOutput  ()
+(defun toggle-math-output  ()
       (command "(toggle-session-scheme-math)"))
       
-(defun toggleTreeOutput  ()
+(defun toggle-tree-output  ()
       (command "(toggle-session-scheme-trees)"))  
       
-(defun toggleSchemeTreeOutput  ()
+(defun toggle-scheme-tree-output  ()
       (command "(toggle-session-scheme-strees)"))  
       
-(defun showTimings  ()
+(defun show-timings  ()
       (command "(toggle-session-output-timings)"))
       
-(defun clearAllFields  ()
+(defun clear-all-fields  ()
       (command "(session-clear-all)"))
       
-(defun foldAllFields  ()
+(defun fold-all-fields  ()
       (command "(session-fold-all)"))
       
-(defun unfoldAllFields  ()
+(defun unfold-all-fields  ()
       (command "(session-unfold-all)"))
       
-(defun evaluateFieldsInOrder  ()
+(defun evaluate-fields-in-order  ()
       (command "(toggle-session-program)"))
       
-(defun createSubsession  ()
+(defun create-subsession  ()
       (command "(field-insert-fold (focus-tree))"))
       
-(defun splitSession  () 
+(defun split-session  () 
       (command "(session-split)"))
       
-(defun sessionEval  ()
+(defun session-eval  ()
       (command "(session-evaluate)"))
       
-(defun evaluateAll  ()
+(defun evaluate-all  ()
       (command "(session-evaluate-all)"))
       
-(defun evaluateAbove  ()
+(defun evaluate-above  ()
       (command "(session-evaluate-above)"))
   
-(defun evaluateBelow  ()
+(defun evaluate-below  ()
       (command "(session-evaluate-below)"))
       
-(defun previousField  ()
+(defun previous-field  ()
       (command "(traverse-previous)"))
       
-(defun nextField  ()
+(defun next-field  ()
       (command "(traverse-next)"))
       
-(defun firstField  ()
+(defun first-field  ()
       (command "(traverse-first)"))
       
-(defun lastField  ()
+(defun last-field  ()
       (command "(traverse-last)"))
       
-(defun  insertFieldAbove  ()
+(defun  insert-field-above  ()
       (command "(field-insert (focus-tree) #f)"))
       
-(defun  insertFieldBelow  ()
+(defun  insert-field-below  ()
       (command "(field-insert (focus-tree) #t)"))
       
-(defun removePreviousField  ()
+(defun remove-previous-field  ()
       (command "(field-remove (focus-tree) #f)"))
       
-(defun removeNextField  ()
+(defun remove-next-field  ()
       (command "(field-remove (focus-tree) #t)"))
       
-(defun removeBanner  ()
+(defun remove-banner  ()
       (command "(field-remove-banner (focus-tree))"))
       
-(defun removeLastField  ()
+(defun remove-last-field  ()
       (command "(field-remove-extreme (focus-tree) #t)"))
       
-(defun closeSession  ()
+(defun close-session  ()
       (command "(plugin-stop)"))
       
 (defun toggle-full-screen ()
       (command "(toggle-full-screen-mode)"))
       
-(defun changeZoomFactor (z) 
+(defun change-zoom-factor (z) 
     (let ((z (max (min z 25.0) 0.04)))
        (command (format 'nil "(change-zoom-factor ~A)" z))))
          
@@ -155,16 +156,16 @@
      (command (format 'nil "(zoom-out ~A)" z)))
       
     
-(defun fitAllToScreen  ()
+(defun fit-all-to-screen  ()
       (command "(fit-all-to-screen)"))
       
-(defun fitToScreen  ()
+(defun fit-to-screen  ()
       (command "(fit-to-screen)"))
       
-(defun fitToScreenWidth  ()
+(defun fit-to-screen-width  ()
       (command "(fit-to-screen-width)"))
       
-(defun fitToScreenHeight  ()
+(defun fit-to-screenHeight  ()
       (command "fit-to-screen-height"))
       
 (defun mathInput(s) s)
