@@ -34,8 +34,24 @@ feature will be used here, hence your current installation of __SBCL__ will not 
 
 ## Support package "TMSPT"
 
-One may control __TeXmacs__ by messaging ...
+One may control __TeXmacs__ by sending apropriate (scheme/guile)
+messages to __TeXmacs__. Most of the menu commands may be mapped
+to a __LISP__ function. Thus inserting images, hyperlinks, latex,
+schmeme, postscript and so on can be done by the plugin when 
+loading the package __TMSPT__ (`plugin/lisp/tmppt.lisp`).
 
 :TODO:
 
+Start sequence in `init-sbcl.scm`: 
+
+     (:launch "sh /path/to/sbcl/run-sbcl.sh --eval
+         \"(defun debug-ignore (c h) (declare (ignore h)) (print c)
+         (abort))\" --eval \"(setf *debugger-hook* #'debug-ignore)\"")
+
+
+
 ![tmspt](./plugin/doc/tm-p-sample-1.jpg?raw=true)
+
+#### Inline and Link Images 
+
+![img](./plugin/doc/inlineimg.jpg?raw=true)
