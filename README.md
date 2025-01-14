@@ -55,3 +55,70 @@ Start sequence in `init-sbcl.scm`:
 #### Inline and Link Images 
 
 ![img](./plugin/doc/inlineimg.jpg?raw=true)
+
+
+## Exported functions
+
+The function names are more or less self-explaining: 
+
+    (defpackage TMSPT (:use common-lisp)
+        (:export #:tm-message
+           #:verbatim
+           #:command
+           #:latex
+           #:scheme
+           #:html
+           #:ps
+           #:output
+           #:prompt
+           #:input
+           #:add-style
+           #:rempve-style
+           #:toggle-header
+           #:toggle-footer
+           #:insert-text-field-above
+           #:insert-text-field-below
+           #:add-default-style
+           #:remove-default-style
+           #:link-image
+           #:inline-image
+           #:toggle-math-input
+           #:toggle-multiline-input
+           #:toggle-math-output
+           #:toggle-scheme-output
+           #:toggle-scheme-tree-output
+           #:show-timings
+           #:clear-all-fields
+           #:fold-all-fields
+           #:unfold-all-fields
+           #:evaluate-fields-in-order
+           #:create-subsession
+           #:split-session
+           #:session-eval
+           #:evaluate-all
+           #:evaluate-above
+           #:evaluate-below
+           #:previous-field
+           #:next-field
+           #:first-field
+           #:last-field
+           #:insert-field-above
+           #:insert-field-below
+           #:remove-next-field 
+           #:remove-banner
+           #:remove-last-field
+           #:close-session
+           #:toggle-full-screen
+           #:change-zoom-factor
+           #:zoom-in
+           #:zoom-out
+           #:fit-all-to-screen
+           #:fit-to-screen
+           #:fit-to-screen-width 
+           #:fit-to-screen-height)
+
+
+For details consult the source file `tmspt.lisp` in the `plugin/lisp/` directory.
+
+
+:date: 14-JAN-2025

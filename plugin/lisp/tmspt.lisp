@@ -1,4 +1,86 @@
-(defpackage TMSPT (:use common-lisp))
+;;; kfp@omega:~/quicklisp/local-projects/cl-tmspt$ cat cl-tmspt.asd 
+;;; (in-package :common-lisp-user)
+;;;(asdf:defsystem #:cl-tmspt
+;;;  :serial t
+;;;  :description "TeXmacs support for common-lisp plugins"
+;;;  :version "0.4.1"
+;;;  :author "Kurt Pagani <nilqed@gmail.com>"
+;;;  :license "MIT"
+;;;  :depends-on ()
+;;;  :pathname "/home/kfp/devel/sbcl-texmacs-plugin/sbcl/plugin/lisp/"
+;;;  :components ((:file "tmspt")))
+;;;  ---- make docs
+;;;  (ql:quickload :coo)
+;;;  (coo:document-system "cl-tmspt")
+
+(defpackage TMSPT (:use common-lisp)
+  (:export #:tm-message
+           #:verbatim
+           #:command
+           #:latex
+           #:scheme
+           #:html
+           #:ps
+           #:output
+           #:prompt
+           #:input
+           #:add-style
+           #:rempve-style
+           #:toggle-header
+           #:toggle-footer
+           #:insert-text-field-above
+           #:insert-text-field-below
+           #:add-default-style
+           #:remove-default-style
+           #:link-image
+           #:inline-image
+           #:toggle-math-input
+           #:toggle-multiline-input
+           #:toggle-math-output
+           #:toggle-scheme-output
+           #:toggle-scheme-tree-output
+           #:show-timings
+           #:clear-all-fields
+           #:fold-all-fields
+           #:unfold-all-fields
+           #:evaluate-fields-in-order
+           #:create-subsession
+           #:split-session
+           #:session-eval
+           #:evaluate-all
+           #:evaluate-above
+           #:evaluate-below
+           #:previous-field
+           #:next-field
+           #:first-field
+           #:last-field
+           #:insert-field-above
+           #:insert-field-below
+           #:remove-next-field 
+           #:remove-banner
+           #:remove-last-field
+           #:close-session
+           #:toggle-full-screen
+           #:change-zoom-factor
+           #:zoom-in
+           #:zoom-out
+           #:fit-all-to-screen
+           #:fit-to-screen
+           #:fit-to-screen-width 
+           #:fit-to-screen-height)
+
+(:documentation 
+"References: ::
+  
+      https://github.com/texmacs/texmacs/tree/master/TeXmacs/progs
+      TeXmacs - Scheme Developer Guide [texmacs-scheme.en.pdf]
+      
+Description: ::
+   
+      TeXmacs support package.
+      Control of TeXmacs Interface/GUI from FriCAS.
+      E.g. toggling header/footer, including images, adding/removing style  files and so on."))
+                                      
 
 (in-package :tmspt)
 
@@ -125,10 +207,10 @@
 (defun last-field  ()
       (command "(traverse-last)"))
       
-(defun  insert-field-above  ()
+(defun insert-field-above  ()
       (command "(field-insert (focus-tree) #f)"))
       
-(defun  insert-field-below  ()
+(defun insert-field-below  ()
       (command "(field-insert (focus-tree) #t)"))
       
 (defun remove-previous-field  ()
@@ -169,7 +251,7 @@
 (defun fit-to-screen-width  ()
       (command "(fit-to-screen-width)"))
       
-(defun fit-to-screenHeight  ()
+(defun fit-to-screen-height  ()
       (command "fit-to-screen-height"))
       
 (defun mathInput(s) s)
