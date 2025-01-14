@@ -48,15 +48,19 @@
       
 (defun add-default-style () (add-style *defaultstyle*))
 (defun remove-default-style () (remove-style *defaultstyle*))  
-    
+  
+;;; Scheme]  ;;; arguments must be a pair (now it works :)  
+;;; (make-inline-image '("/path/to/lisp.jpg"  "" "" "" ""))
+  
+  
 (defun link-image (url)
-    (let ((msg (format 'nil 
-        "(make-link-image ~S ~S ~S ~S ~S)" url "" "" "" "")))
+    (let ((msg (format nil 
+        "(make-link-image '(~S ~S ~S ~S ~S))" url "" "" "" "")))
            (command msg)))
   
 (defun inline-image (url &key (w "") (h "") (x "") (y ""))
-    (let ((msg (format 'nil 
-        "(make-inline-image ~S ~S ~S ~S ~S)" url w h x y)))
+    (let ((msg (format nil 
+        "(make-inline-image '(~S ~S ~S ~S ~S))" url w h x y)))
            (insert-text-field-above)
            (command msg)))
 
