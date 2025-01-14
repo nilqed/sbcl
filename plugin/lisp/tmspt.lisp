@@ -56,7 +56,7 @@
   
 (defun inline-image (url &key (w "") (h "") (x "") (y ""))
     (let ((msg (format 'nil 
-        "(make-link-image ~S ~S ~S ~S ~S)" url w h x y)))
+        "(make-inline-image ~S ~S ~S ~S ~S)" url w h x y)))
            (insert-text-field-above)
            (command msg)))
 
