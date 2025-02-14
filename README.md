@@ -123,12 +123,12 @@ For details consult the source file `tmspt.lisp` in the `plugin/lisp/` directory
 
 
 ## TeXmacs Serializer
-Mathematical input (math-mode)
+Mathematical input (math-mode).
 
-:TODO
+:TODO: rewrite 
 
 
-![mathmode](./plugin/doc/serializer.png?raw=true)
+![mathmode](./plugin/doc/serializer.jpg?raw=true)
 
 
 :date: 14-JAN-2025
