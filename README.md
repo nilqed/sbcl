@@ -121,4 +121,14 @@ The function names are more or less self-explaining:
 For details consult the source file `tmspt.lisp` in the `plugin/lisp/` directory.
 
 
+
+## TeXmacs Serializer
+Mathematical input (math-mode)
+
+:TODO
+
+
+![mathmode](./plugin/doc/serializer.png?raw=true)
+
+
 :date: 14-JAN-2025
