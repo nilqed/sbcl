@@ -28,7 +28,7 @@ feature will be used here, hence your current installation of __SBCL__ will not 
 3. Check if build was successful by `sh run-sbcl.sh`
 4. Copy the `plugin` directory to your TeXmacs/plugin folder and rename it to `sbcl`:
    Before, adjust the path to `run-sbcl.sh` by editing the file `./plugin/progs/init-sbcl.scm`   
-   `$ cp -r ./plugin $HOME/.Texmacs/plugins/sbcl`
+   `$ cp -r ./plugin $HOME/.TeXmacs/plugins/sbcl`
 5. Test it :lemon:.
 
 
@@ -40,7 +40,6 @@ to a __LISP__ function. Thus inserting images, hyperlinks, latex,
 schmeme, postscript and so on can be done by the plugin when 
 loading the package __TMSPT__ (`plugin/lisp/tmppt.lisp`).
 
-:TODO:
 
 Start sequence in `init-sbcl.scm`: 
 
