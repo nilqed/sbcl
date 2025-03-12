@@ -29,8 +29,7 @@ feature will be used here, hence your current installation of __SBCL__ will not 
 4. Copy the `plugin` directory to your TeXmacs/plugin folder and rename it to `sbcl`:
    Before, adjust the path to `run-sbcl.sh` by editing the file `./plugin/progs/init-sbcl.scm`   
    `$ cp -r ./plugin $HOME/.TeXmacs/plugins/sbcl`
-5. Test it :lemon:.
-
+5. Test it :lemon:.[^1]
 
 ## Support package "TMSPT"
 
@@ -38,7 +37,7 @@ One may control __TeXmacs__ by sending apropriate (scheme/guile)
 messages to __TeXmacs__. Most of the menu commands may be mapped
 to a __LISP__ function. Thus inserting images, hyperlinks, latex,
 schmeme, postscript and so on can be done by the plugin when 
-loading the package __TMSPT__ (`plugin/lisp/tmppt.lisp`).
+loading the package __TMSPT__ (`plugin/lisp/tmspt.lisp`).
 
 
 Start sequence in `init-sbcl.scm`: 
@@ -128,6 +127,9 @@ Mathematical input (math-mode).
 
 
 ![mathmode](./plugin/doc/serializer.jpg?raw=true)
+
+
+[^1]: Use "STOP" button if "busy" for too long  ...
 
 
 :date: 14-JAN-2025
